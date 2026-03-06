@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <meta charset="UTF-8">
     <title>Portifólio do Leo</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -19,26 +20,35 @@ margin: 0;
 h1 {
     color: #00ff88;
 }
-/* NOVOS ESTILOS */ 
-.links { margin-top: 20px;
-display: flex;
-gap: 15px;
-} 
-.botao {
-    background-color: #00ff88;
-    color: #1a1a1a;
-    padding: 10px 20px;
-    text-decoration: none;
-    border-radius: 5px;
-    font-weight: bold;
-    transition: 0.3s;
-} 
-.botao:hover {
-            background-color: #ffffff; /* Fundo fica branco */
-            color: #000000;            /* Texto fica preto para ler melhor */
-            transform: scale(1.05);    /* Aumenta só um pouquinho */
-            box-shadow: 0 0 20px #00ff88; /* Adiciona o brilho neon verde */
-        }
+/* NOVOS ESTILOS */
+    .links {
+        margin-top: 20px;
+        display: flex;
+        gap: 15px;
+    }
+
+    .botao {
+        background-color: #00ff88;
+        color: #1a1a1a;
+        padding: 10px 20px;
+        text-decoration: none;
+        border-radius: 5px;
+        font-weight: bold;
+        transition: 0.3s;
+        display: flex;       /* Adicione isso para alinhar ícone e texto */
+        align-items: center; /* Centraliza o ícone verticalmente */
+    }
+
+    .botao i {
+        margin-right: 8px; /* O espaço exato que você queria */
+    }
+
+    .botao:hover {
+        background-color: #ffffff;
+        color: #000000;
+        transform: scale(1.05);
+        box-shadow: 0 0 20px #00ff88;
+    }
 @media (max-width: 600px) {
  body {
     padding: 20px;
@@ -60,8 +70,8 @@ gap: 15px;
     <h1>Leonardo Borges</h1>
  <p>Aprendendo, criando e evoluindo no mundo da programação.</p>
    <div class="links">
-            <a href="https://www.linkedin.com/in/leonardo-borges-74214b389/" target="_blank" class="botao">LinkedIn</a>
-            <a href="https://github.com/LeoBorges-dev" target="_blank" class="botao">GitHub</a>
+<a href="https://www.linkedin.com/in/leonardo-borges-74214b389/" target="_blank" class="botao"><i class="fa-brands fa-linkedin"></i> LinkedIn</a>
+<a href="https://github.com/LeoBorges-dev" target="_blank" class="botao"><i class="fa-brands fa-github"></i> GitHub</a>
 </div>
 </body>
 </html>   
