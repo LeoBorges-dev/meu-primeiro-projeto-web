@@ -90,22 +90,52 @@ h1 {
     text-align: center;
    }
 }
+/* Cole aqui, antes da linha 93 */
+.card {
+    background: rgba(255, 255, 255, 0.05); 
+    backdrop-filter: blur(10px); 
+    padding: 40px;
+    border-radius: 20px;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    text-align: center;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+    max-width: 400px; /* Mantém o card com um tamanho bom */
+}
+
+.perfil-foto {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    border: 3px solid #00ff88;
+    margin-bottom: 15px;
+    box-shadow: 0 0 15px #00ff88;
+}
 </style>
 </head>
 <body>
-    <h1>Leonardo Borges</h1>
- <p>Aprendendo, criando e evoluindo no mundo da programação.</p>
-   <div class="links">
-<a href="https://www.linkedin.com/in/leonardo-borges-74214b389/" target="_blank" class="botao"><i class="fa-brands fa-linkedin"></i> LinkedIn</a>
-<a href="https://github.com/LeoBorges-dev" target="_blank" class="botao"><i class="fa-brands fa-github"></i> GitHub</a>
-</div>
-<div class="skills">
-        <p>Tecnologias que estou estudando:</p>
-        <div class="icones-skills">
-            <i class="fa-brands fa-html5" style="color: #e34c26;"></i>
-            <i class="fa-brands fa-css3-alt" style="color: #264de4;"></i>
-            <i class="fa-brands fa-git-alt" style="color: #f1502f;"></i>
-            <i class="fa-brands fa-js" style="color: #f7df1e;"></i>
+ <div class="card">
+        <img src="https://github.com/LeoBorges-dev.png" alt="Foto de Leonardo" class="perfil-foto">
+        
+        <h1>Leonardo Borges</h1>
+        <p>Aprendendo, criando e evoluindo no mundo da programação.</p>
+        
+        <div class="links">
+            <a href="https://www.linkedin.com/in/leonardo-borges-74214b389/" target="_blank" class="botao">
+                <i class="fa-brands fa-linkedin"></i> LinkedIn
+            </a>
+            <a href="https://github.com/LeoBorges-dev" target="_blank" class="botao">
+                <i class="fa-brands fa-github"></i> GitHub
+            </a>
+        </div>
+
+        <div class="skills">
+            <p>Tecnologias que estou estudando:</p>
+            <div class="icones-skills">
+                <i class="fa-brands fa-html5" title="HTML5" style="color: #e34c26;"></i>
+                <i class="fa-brands fa-css3-alt" title="CSS3" style="color: #264de4;"></i>
+                <i class="fa-brands fa-git-alt" title="Git" style="color: #f1502f;"></i>
+                <i class="fa-brands fa-js" title="JavaScript" style="color: #f7df1e;"></i>
+            </div>
         </div>
     </div>
 </body>
