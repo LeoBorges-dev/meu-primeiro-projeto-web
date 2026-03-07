@@ -5,119 +5,154 @@
     <meta charset="UTF-8">
     <title>Portifólio do Leo</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<style>
-body {
-  background: radial-gradient(circle, #1a1a1a 60%, #004422 100%);
-color: #ffffff;
-font-family: Arial, sans-serif;
-display: flex;
-flex-direction: column;
-align-items: center;
-justify-content: center;
-height: 100vh;
-margin: 0;
-}
-h1 {
-    color: #00ff88;
-}
-/* NOVOS ESTILOS */
-    .links {
-        margin-top: 20px;
-        display: flex;
-        gap: 15px;
-    }
-
-    .botao {
-        background-color: #00ff88;
-        color: #1a1a1a;
-        padding: 10px 20px;
-        text-decoration: none;
-        border-radius: 5px;
-        font-weight: bold;
-        transition: 0.3s;
-        display: flex;       /* Adicione isso para alinhar ícone e texto */
-        align-items: center; /* Centraliza o ícone verticalmente */
-    }
-
-    .botao i {
-        margin-right: 8px; /* O espaço exato que você queria */
-    }
-
-    .botao:hover {
-        background-color: #ffffff;
-        color: #000000;
-        transform: scale(1.05);
-        box-shadow: 0 0 20px #00ff88;
-    }
-    .skills {
-        margin-top: 40px;
-        text-align: center;
-    }
-
-    .skills p {
-        font-size: 0.9em;
-        color: #888;
-        margin-bottom: 10px;
-    }
-
-    .icones-skills {
-        font-size: 2rem;
-        display: flex;
-        justify-content: center;
-        gap: 20px;
-    }
-
-    .icones-skills i {
-        transition: transform 0.3s;
-        cursor: pointer;
-    }
-
-    .icones-skills i:hover {
-        transform: translateY(-5px);
-    }
-@media (max-width: 600px) {
- body {
-    padding: 20px;
-    justify-content:center;
- }
- .links {
+    <style>
+        body {
+            background: radial-gradient(circle, #1a1a1a 60%, #004422 100%);
+            color: #ffffff;
+            font-family: Arial, sans-serif;
+            display: flex;
             flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            min-height: 100vh;
+            margin: 0;
+            padding: 20px;
+        }
+
+        .card {
+            background: rgba(255, 255, 255, 0.05); 
+            backdrop-filter: blur(10px); 
+            padding: 40px;
+            border-radius: 20px;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            text-align: center;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+            max-width: 450px;
             width: 100%;
+        }
+
+        .perfil-foto {
+            width: 120px;
+            height: 120px;
+            border-radius: 50%;
+            border: 3px solid #00ff88;
+            margin-bottom: 15px;
+            box-shadow: 0 0 15px #00ff88;
+        }
+
+        h1 {
+            color: #00ff88;
+            margin-bottom: 5px;
+        }
+
+        .subtitulo {
+            color: #00ff88;
+            font-weight: bold;
+            margin-top: 0;
+            margin-bottom: 20px;
+            font-size: 0.85rem;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .sobre-mim {
+            background: rgba(0, 0, 0, 0.3);
+            padding: 15px;
+            border-radius: 10px;
+            margin-bottom: 25px;
+            border-left: 4px solid #00ff88;
+            text-align: left;
+        }
+
+        .sobre-mim p {
+            font-size: 0.9rem;
+            line-height: 1.6;
+            color: #ccc;
+            margin: 0;
+        }
+
+        .links {
+            margin-top: 20px;
+            display: flex;
+            gap: 15px;
+            justify-content: center;
+        }
+
+        .botao {
+            background-color: #00ff88;
+            color: #1a1a1a;
+            padding: 10px 20px;
+            text-decoration: none;
+            border-radius: 5px;
+            font-weight: bold;
+            transition: 0.3s;
+            display: flex;
             align-items: center;
         }
- .botao {
-    width: 80%; /*Botões maiores para o polegar */
-    text-align: center;
-   }
-}
-/* Cole aqui, antes da linha 93 */
-.card {
-    background: rgba(255, 255, 255, 0.05); 
-    backdrop-filter: blur(10px); 
-    padding: 40px;
-    border-radius: 20px;
-    border: 1px solid rgba(255, 255, 255, 0.1);
-    text-align: center;
-    box-shadow: 0 10px 30px rgba(0,0,0,0.5);
-    max-width: 400px; /* Mantém o card com um tamanho bom */
-}
 
-.perfil-foto {
-    width: 120px;
-    height: 120px;
-    border-radius: 50%;
-    border: 3px solid #00ff88;
-    margin-bottom: 15px;
-    box-shadow: 0 0 15px #00ff88;
-}
-</style>
+        .botao i {
+            margin-right: 8px;
+        }
+
+        .botao:hover {
+            background-color: #ffffff;
+            color: #000000;
+            transform: scale(1.05);
+            box-shadow: 0 0 20px #00ff88;
+        }
+
+        .skills {
+            margin-top: 30px;
+            text-align: center;
+        }
+
+        .skills p {
+            font-size: 0.8em;
+            color: #888;
+            margin-bottom: 15px;
+        }
+
+        .icones-skills {
+            font-size: 2rem;
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+        }
+
+        .icones-skills i {
+            transition: transform 0.3s;
+            cursor: pointer;
+        }
+
+        .icones-skills i:hover {
+            transform: translateY(-5px);
+        }
+
+        @media (max-width: 600px) {
+            .links {
+                flex-direction: column;
+                align-items: center;
+            }
+            .botao {
+                width: 90%;
+                justify-content: center;
+            }
+        }
+    </style>
 </head>
 <body>
- <div class="card">
+    <div class="card">
         <img src="https://github.com/LeoBorges-dev.png" alt="Foto de Leonardo" class="perfil-foto">
         
         <h1>Leonardo Borges</h1>
-        <p>Aprendendo, criando e evoluindo no mundo da programação.</p>
+        <p class="subtitulo">Estudante de Análise e Desenvolvimento de Sistemas</p>
+
+        <div class="sobre-mim">
+            <p>
+                Atualmente no 3º semestre de ADS na Anhanguera Educacional, com foco em Java e Kotlin. 
+                Possuo experiência sólida como Suporte de Sistemas e Digitador em instituições financeiras, unindo visão técnica e agilidade.
+            </p>
+        </div>
         
         <div class="links">
             <a href="https://www.linkedin.com/in/leonardo-borges-74214b389/" target="_blank" class="botao">
@@ -139,4 +174,4 @@ h1 {
         </div>
     </div>
 </body>
-</html>   
+</html>
